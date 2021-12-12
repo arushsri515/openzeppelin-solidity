@@ -1,6 +1,6 @@
 pragma solidity ^0.4.23;
 
-import "../token/BEP20.sol";
+
 import "../math/SafeMath.sol";
 
 
