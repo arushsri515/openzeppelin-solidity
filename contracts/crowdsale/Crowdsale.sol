@@ -1,6 +1,6 @@
 pragma solidity ^0.4.23;
 
-import "../token/ERC20/ERC20.sol";
+import "../token/BEP20.sol";
 import "../math/SafeMath.sol";
 
 
@@ -20,7 +20,7 @@ contract Crowdsale {
   using SafeMath for uint256;
 
   // The token being sold
-  ERC20 public token;
+  BEP20 public token;
 
   // Address where funds are collected
   address public wallet;
@@ -50,7 +50,7 @@ contract Crowdsale {
    * @param _wallet Address where collected funds will be forwarded to
    * @param _token Address of the token being sold
    */
-  constructor(uint256 _rate, address _wallet, ERC20 _token) public {
+  constructor(uint256 _rate, address _wallet, BEP20 _token) public {
     require(_rate > 0);
     require(_wallet != address(0));
     require(_token != address(0));
